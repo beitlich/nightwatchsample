@@ -1,0 +1,29 @@
+{
+  "name": "nightwatch_sample",
+  "version": "0.0.1",
+  "description": "nightwatch_sample",
+  "main": "apihelper.js",
+  "author": {
+    "name": "Eric Beitlich",
+    "email": "ericbe@magenic.com"
+  },
+  "scripts": {
+    "test-stage-saucelabs-chrome": "./node_modules/.bin/nightwatch --env saucelabschromewindows,saucelabschromemac --tag sauce --reporter ./lib/html-reporter.js",
+    "test-stage-saucelabs-firefox-safari": "./node_modules/.bin/nightwatch --env saucelabsfirefox,saucelabssafari --tag sauce --reporter ./lib/html-reporter.js",
+    "test-stage-saucelabs-edge-ie": "./node_modules/.bin/nightwatch --env saucelabsedge,saucelabsie --tag sauce --reporter ./lib/html-reporter.js",
+    "test-local-chrome": "./node_modules/.bin/nightwatch --env localchrome --tag saucedemo --reporter ./lib/html-reporter.js",
+    "dev-saucelabs": "./node_modules/.bin/nightwatch --env saucelabschromewindows --tag dev --reporter ./lib/html-reporter.js"
+  },
+  "dependencies": {
+    "chromedriver": "^2.37.0",
+    "eslint": "^4.19.1",
+    "faker": "^4.1.0",
+    "geckodriver": "^1.11.0",
+    "junit-merge": "^1.3.0",
+    "nightwatch": "^0.9.21",
+    "nightwatch-html-reporter": "^2.0.5",
+    "request": "^2.87.0",
+    "saucelabs": "^1.5.0",
+    "selenium-server-standalone-jar": "^3.12.0"
+  }
+}
